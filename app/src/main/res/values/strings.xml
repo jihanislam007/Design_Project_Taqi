@@ -1,4 +1,24 @@
 <resources>
     <string name="app_name">Design Project Taqi</string>
     <string name="title_activity_dash_board_worker_list">DashBoardWorkerList</string>
+
+    <string-array name="service">
+        <item>service</item>
+        <item>service 1</item>
+        <item>service 2</item>
+        <item>service 3</item>
+        <item>service 4</item>
+        <item>service 5</item>
+    </string-array>
+
+
+    <string-array name="work_time">
+        <item>For how long</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+
 </resources>
