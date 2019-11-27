@@ -12,22 +12,22 @@
         <activity android:name=".PopUpActivity"
             android:theme="@style/AppTheme.CustomTheme"></activity>
         <activity android:name=".WorkerOrderActivity" >
-            <intent-filter>
+            <!--<intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter>-->
         </activity>
         <activity
             android:name=".DashBoardWorkerList"
             android:label="@string/title_activity_dash_board_worker_list"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".MainActivity">
-            <!--<intent-filter>
+            <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>-->
+            </intent-filter>
         </activity>
 
         <meta-data
