@@ -22,5 +22,6 @@
     </string-array>
 
     <string name="string">A pet, or companion animal, is an animal kept primarily for a person company, entertainment or as an act of compassion such as taking in and protecting a stray cat, rather than as a working animal, livestock or laboratory animal.</string>
+    <string name="title_activity_dashboard">DashboardActivity</string>
 
 </resources>

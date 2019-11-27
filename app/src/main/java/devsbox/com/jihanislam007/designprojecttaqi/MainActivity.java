@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 import java.util.ArrayList;
 
@@ -29,12 +30,15 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView image;
 
+    LinearLayout index;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        image = findViewById(R.id.image);
+        image = (ImageView) findViewById(R.id.image);
+        index = (LinearLayout) findViewById(R.id.index);
 
 
         FeaturePetLover_RV = findViewById(R.id.FeaturePetLover_RV);
@@ -60,10 +64,21 @@ public class MainActivity extends AppCompatActivity {
         image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent in = new Intent(MainActivity.this,DashBoardWorkerList.class);
+                Intent in = new Intent(MainActivity.this,DashboardActivity.class);
                 startActivity(in);
             }
         });
+
+        index.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,WorkerOrderActivity.class);
+                startActivity(in);
+            }
+        });
+
+
+
     }
 
     public void test_data_topRated(){
