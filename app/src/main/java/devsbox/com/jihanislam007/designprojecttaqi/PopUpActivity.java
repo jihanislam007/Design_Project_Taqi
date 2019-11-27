@@ -25,6 +25,7 @@ public class PopUpActivity extends AppCompatActivity {
 
         TextView  textView=(TextView) findViewById(R.id.pop_up_serviceTV);
         TextView  timeTV=(TextView) findViewById(R.id.timeSpinner);
+        TextView  dateTV=(TextView) findViewById(R.id.dateTV);
 
 
         Bundle bundle=getIntent().getExtras();
@@ -33,6 +34,11 @@ public class PopUpActivity extends AppCompatActivity {
 
         String time = bundle.get("time").toString();
         timeTV.setText(time);
+
+        String date = bundle.get("date").toString();
+        dateTV.setText(date);
+
+
 
     }
 }
