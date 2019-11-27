@@ -191,6 +191,7 @@
                 android:orientation="vertical">
 
                 <Spinner
+                    android:id="@+id/serviceSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:entries="@array/service"></Spinner>
@@ -233,7 +234,9 @@
                 android:layout_marginTop="4dp"
                 android:orientation="vertical">
 
+
                 <TextView
+                    android:id="@+id/datePicker"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:text="Peak Up Date"
@@ -279,6 +282,7 @@
                 android:orientation="vertical">
 
                 <Spinner
+                    android:id="@+id/TimeSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:entries="@array/work_time"></Spinner>
