@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import java.util.ArrayList;
 
@@ -24,11 +27,15 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<FeaturePetLover> featurePetLovers = new ArrayList<FeaturePetLover>();
     FeaturePetLober_adaptor featurePetLober_adaptor;
 
+    ImageView image;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        image = findViewById(R.id.image);
+
 
         FeaturePetLover_RV = findViewById(R.id.FeaturePetLover_RV);
         TopRatedPetLover_RV = findViewById(R.id.TopRatedPetLover_RV);
@@ -48,6 +55,15 @@ public class MainActivity extends AppCompatActivity {
 
         test_data_feature();
         test_data_topRated();
+
+
+        image.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in = new Intent(MainActivity.this,DashBoardWorkerList.class);
+                startActivity(in);
+            }
+        });
     }
 
     public void test_data_topRated(){
