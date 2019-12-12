@@ -5,11 +5,18 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.Environment;
+import android.util.Base64;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 
 import devsbox.com.jihanislam007.designprojecttaqi.Adaptor.FeaturePetLober_adaptor;
@@ -31,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
     ImageView image;
 
     LinearLayout index;
+
+    private int[] images_data = {R.drawable.profile,
+    R.drawable.slide};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,16 +93,29 @@ public class MainActivity extends AppCompatActivity {
 
     public void test_data_topRated(){
 
-        TopRatedPetLover data1 = new TopRatedPetLover("https://image.flaticon.com/icons/png/128/167/167707.png","Taqi Tahmid","Lover",1);
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.profile);
+
+
+        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.PNG, 100, baos);
+        byte[] b = baos.toByteArray();
+        String temp = Base64.encodeToString(b, Base64.DEFAULT);
+
+
+        Toast.makeText(this, temp, Toast.LENGTH_SHORT).show();
+
+
+        TopRatedPetLover data1 = new TopRatedPetLover(temp,"Taqi Tahmid","Lover",1);
         categoryList.add(data1);
 
-        TopRatedPetLover data2 = new TopRatedPetLover("https://keysinspectorinc.com/image/124543-full_vladimir-putin-png-image-purepng-free-transparent-cc0.png","Taqi Tahmid","Lover",1);
+        TopRatedPetLover data2 = new TopRatedPetLover(temp,"Taqi Tahmid","Lover",2);
         categoryList.add(data2);
 
-        TopRatedPetLover data3 = new TopRatedPetLover("https://i.udemycdn.com/course/750x422/403678_1d20_4.jpg","Taqi Tahmid","Lover",1);
+        TopRatedPetLover data3 = new TopRatedPetLover("https://i.udemycdn.com/course/750x422/403678_1d20_4.jpg","Taqi Tahmid","Lover",3);
         categoryList.add(data3);
 
-        TopRatedPetLover data4 = new TopRatedPetLover("https://images-na.ssl-images-amazon.com/images/I/71iU53Q-gaL.png","Taqi Tahmid","Lover",1);
+        TopRatedPetLover data4 = new TopRatedPetLover("https://images-na.ssl-images-amazon.com/images/I/71iU53Q-gaL.png","Taqi Tahmid","Lover",4);
         categoryList.add(data4);
 
     }
